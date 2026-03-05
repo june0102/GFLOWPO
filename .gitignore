@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.env
+.venv/
+venv/
+
+# Conda
+*.conda
+conda-env/
+
+# WandB
+wandb/
+wandb_logs/
+wandb-debug.log
+wandb-debug-internal.log
+
+# HuggingFace / cache
+.cache/
+huggingface/
+hf_cache/
+transformers_cache/
+
+# Checkpoints / logs
+checkpoints/
+logs/
+outputs/
+.cache/
+huggingface/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
