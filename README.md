@@ -4,9 +4,13 @@ conda activate rd_test
 pip install -U pip setuptools wheel
 
 pip install -U torch==2.6.0 torchvision torchaudio accelerate transformers
+
 pip install vllm==0.8.4
+
 pip install flash-attn==2.7.1.post4 --no-build-isolation
+
 pip install typed-argument-parser csv_logger peft sentence_transformers editdistance pandas fastchat matplotlib datasets trl wandb
+
 pip install -r requirements.txt
 
 Text Classificaion
