@@ -24,7 +24,6 @@ python -m pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index
 
 3) Install this file:
 python -m pip install -r requirements_rd_test2.txt
-sympy때문에 torch 버전이 다시 2.6.0으로 낮아집니다 
 
 
 4) Install CUDA-coupled packages last:
