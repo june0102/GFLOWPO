@@ -83,7 +83,7 @@ class GFNEMTrainer():
         self.model = AutoModelForCausalLM.from_pretrained(
             args.agent_model,
             cache_dir=args.cache_dir,
-            dtype=torch.bfloat16,
+            torch_dtype=torch.bfloat16,
             config=config,
             device_map=self.device
         )

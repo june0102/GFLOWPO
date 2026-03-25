@@ -14,7 +14,7 @@ tmux kill-session -t "$proc_name" 2>/dev/null || true
 
 tmux new -d -s "$proc_name"
 tmux send-keys -t "$proc_name" "if [ -f \"\$HOME/anaconda3/etc/profile.d/conda.sh\" ]; then source \"\$HOME/anaconda3/etc/profile.d/conda.sh\"; elif [ -f \"\$HOME/miniconda3/etc/profile.d/conda.sh\" ]; then source \"\$HOME/miniconda3/etc/profile.d/conda.sh\"; elif command -v conda >/dev/null 2>&1; then source \"\$(conda info --base)/etc/profile.d/conda.sh\"; fi" C-m
-tmux send-keys -t "$proc_name" "conda activate rd_test" C-m
+tmux send-keys -t "$proc_name" "conda activate rd_test2" C-m
 tmux send-keys -t "$proc_name" "cd \"$SCRIPT_DIR\"" C-m
 tmux send-keys -t "$proc_name" "export PYTHONPATH=\"$SCRIPT_DIR:\$PYTHONPATH\"" C-m
 
@@ -30,7 +30,8 @@ for TASK in "${TASKS[@]}"; do
     --batch_size 1 \
     --grad_acc_steps 16 \
     --max_prompt_length 150 \
-    --num_example 5 \
+    --meta_prompt 'I gave a friend an instruction and three inputs. The friend read the instruction and wrote an output for every one of the inputs. Here are the input-output pairs: \n' \
+    --num_example 3 \
     --gamma 1.0 \
     --lr 1e-4 \
     --lora_r 16 \
