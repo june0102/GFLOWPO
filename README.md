@@ -14,6 +14,7 @@ git clone https://github.com/june0102/GFLOWPO.git
 # rd_test2 / B200 (cu128) environment notes
 #
 # 1) Activate the env and keep user-site packages out of the way:
+#    conda create -n rd_test2 -y python=3.10 
 #    conda activate rd_test2
 #    conda env config vars set PYTHONNOUSERSITE=1
 #    conda deactivate && conda activate rd_test2
