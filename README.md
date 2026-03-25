@@ -6,7 +6,7 @@ Prompt optimization via GflowNet
 한줄씩 치셔야 됩니다
 
 
-```
+```bash
 git clone https://github.com/june0102/GFLOWPO.git
 ```
 
