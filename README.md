@@ -20,7 +20,7 @@ git clone https://github.com/june0102/GFLOWPO.git
 #    conda deactivate && conda activate rd_test2
 #
 # 2) Install PyTorch first (already done in your case):
-python -m pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 \ --index-url https://download.pytorch.org/whl/cu128
+python -m pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu128
 #
 # 3) Install this file:
 #    python -m pip install -r requirements_rd_test2.txt
