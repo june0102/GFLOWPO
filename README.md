@@ -11,15 +11,24 @@ git clone https://github.com/june0102/GFLOWPO.git
 ```
 
 ```bash
-conda create -n rd_test python=3.10 -y
-conda activate rd_test
-
-pip install -U pip setuptools wheel
-pip install -U torch==2.6.0 torchvision torchaudio accelerate transformers
-pip install vllm==0.8.4
-pip install flash-attn==2.7.1.post4 --no-build-isolation
-pip install typed-argument-parser csv_logger peft sentence_transformers editdistance pandas fastchat matplotlib datasets trl wandb
-pip install -r requirements.txt
+# rd_test2 / B200 (cu128) environment notes
+#
+# 1) Activate the env and keep user-site packages out of the way:
+#    conda activate rd_test2
+#    conda env config vars set PYTHONNOUSERSITE=1
+#    conda deactivate && conda activate rd_test2
+#
+# 2) Install PyTorch first (already done in your case):
+#    python -m pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 \
+#      --index-url https://download.pytorch.org/whl/cu128
+#
+# 3) Install this file:
+#    python -m pip install -r requirements_rd_test2.txt
+#
+# 4) Install CUDA-coupled packages last:
+#    python -m pip install xformers==0.0.30
+#    MAX_JOBS=4 python -m pip install flash-attn==2.8.3 --no-build-isolation --no-cache-dir
+#    python -m pip install vllm==0.9.2
 
 ```
 
