@@ -6,6 +6,9 @@ Prompt optimization via GflowNet
 한줄씩 치셔야 됩니다
 
 
+```
+git clone https://github.com/june0102/GFLOWPO.git
+```
 
 ```bash
 conda create -n rd_test python=3.10 -y
