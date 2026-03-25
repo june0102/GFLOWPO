@@ -3,6 +3,10 @@
 Prompt optimization via GflowNet
 
 ## Installation
+한줄씩 치셔야 됩니다
+
+
+
 ```bash
 conda create -n rd_test python=3.10 -y
 conda activate rd_test
