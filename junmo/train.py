@@ -31,7 +31,7 @@ def parser_args():
     parser.add_argument('--num_example', type=int, default=5)
     parser.add_argument('--epochs', type=int, default=30)
     parser.add_argument('--meta_prompt', type=str,
-                       default='I gave a friend an instruction and three inputs. The friend read the instruction and wrote an output for every one of the inputs. Here are the input-output pairs: \n')
+                       default='I gave a friend an instruction and five inputs. The friend read the instruction and wrote an output for every one of the inputs. Here are the input-output pairs: \n')
 
     # GFN hyperparameters
     parser.add_argument('--beta', type=float, default=None,

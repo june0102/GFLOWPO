@@ -1,7 +1,7 @@
-proc_name=gpu_0
+proc_name=gpu_3
 exp_name=$proc_name
 cnt=0
-gpus=(0)
+gpus=(3)
 n_gpus=${#gpus[@]}
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -73,7 +73,7 @@ tmux kill-session -t "$proc_name$cnt" 2>/dev/null || true
 
 tmux new -d -s "$proc_name$cnt"
 tmux send-keys -t "$proc_name$cnt" "if [ -f \"\$HOME/anaconda3/etc/profile.d/conda.sh\" ]; then source \"\$HOME/anaconda3/etc/profile.d/conda.sh\"; elif [ -f \"\$HOME/miniconda3/etc/profile.d/conda.sh\" ]; then source \"\$HOME/miniconda3/etc/profile.d/conda.sh\"; elif command -v conda >/dev/null 2>&1; then source \"\$(conda info --base)/etc/profile.d/conda.sh\"; fi" C-m
-tmux send-keys -t "$proc_name$cnt" "conda activate rd_test" C-m
+tmux send-keys -t "$proc_name$cnt" "conda activate rd_test2" C-m
 tmux send-keys -t "$proc_name$cnt" "cd \"$SCRIPT_DIR\"" C-m
 tmux send-keys -t "$proc_name$cnt" "export PYTHONPATH=\"$SCRIPT_DIR:\$PYTHONPATH\"" C-m
 
